@@ -1,0 +1,38 @@
+<script type="text/javascript">
+$(document).ready(function($)
+{
+    var page_url = '<?php echo $app_url?>/';
+
+    $(document).on('click', '.btn_load_home', function(event)
+    {
+        event.preventDefault();
+
+        $(document).attr("title", 'Home');
+        $(document).find('meta[name=description]').attr('content', data.description);
+
+        window.history.pushState("", "", page_url);
+        $(document).find('.post_msg').html(" ");
+    });
+
+    $(document).on('click', '.btn_load_screen', function(event)
+    {
+        event.preventDefault();
+
+        var call_type = $(this).attr('call_type');
+
+        $.getJSON(page_url+'ajax.php', {call_type: call_type}, function(data, textStatus, xhr)
+        {
+            console.log(data);
+
+            $(document).attr("title", data.title);
+            $(document).find('meta[name=description]').attr('content', data.description);
+
+            $(document).find('.post_msg').html(data.data);
+
+            window.history.pushState("", "", page_url+data.url);
+        });
+    });
+
+
+});
+</script>
