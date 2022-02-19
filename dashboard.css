@@ -166,7 +166,7 @@ aside .close{
 
 /* --------SIDEBAR---------- */
 aside .sidebar{
-  /* background: red; */
+  
   display: flex;
   flex-direction: column;
   height: 86vh;
