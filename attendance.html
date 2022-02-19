@@ -24,11 +24,11 @@
         </div>
 
           <div class="sidebar">
-            <a href="#" class="active">
+            <a href="index.html" >
               <span class="material-icons-sharp">grid_view</span>
               <h3>DASHBOARD</h3>
             </a>
-            <a href="attendance.html">
+            <a href="attendance.html" class="active">
               <span class="material-icons-sharp">engineering</span>
               <h3>EMPLOYEE</h3>
             </a>
@@ -69,7 +69,7 @@
 
 
       <main>
-        <h1>DASHBOARD</h1>
+        <h1>Monitoring</h1>
 
         <div class="date">
           <input type="date">
@@ -80,15 +80,15 @@
             <span class="material-icons-sharp">analytics</span>
             <div class="middle">
               <div class="left">
-                <h3>Total Sales</h3>
-                <h1>$25,024</h1>
+                <h3>Total present</h3>
+                <h1>100</h1>
               </div>
               <div class="progress">
                 <svg>
                   <circle cx="38" cy="38" r="36"></circle>
                 </svg>
                 <div class="number">
-                  <p>81%</p>
+                  <p>90%</p>
                 </div>
               </div>
             </div>
@@ -99,22 +99,22 @@
             <span class="material-icons-sharp">bar_chart</span>
             <div class="middle">
               <div class="left">
-                <h3>Total Expenses</h3>
-                <h1>$14,160</h1>
+                <h3>Total Absent</h3>
+                <h1>10</h1>
               </div>
               <div class="progress">
                 <svg>
                   <circle cx="38" cy="38" r="36"></circle>
                 </svg>
                 <div class="number">
-                  <p>62%</p>
+                  <p>10%</p>
                 </div>
               </div>
             </div>
             <small class="text-muted">Last 24 Hours</small>
           </div>
             <!-----END OF EXPENSES ---->
-          <div class="income">
+          <!-- <div class="income">
               <span class="material-icons-sharp">stacked_line_chart</span>
               <div class="middle">
                 <div class="left">
@@ -131,57 +131,56 @@
                 </div>
               </div>
               <small class="text-muted">Last 24 Hours</small>
-          </div>
+          </div> -->
               <!-----END OF INCOME ---->
         </div>
               <!-----END OF INSIGHTS ---->
 
         <div class="recent-orders">
-          <h2>RECENT ORDERS</h2>
+          <h2>Attendance</h2>
           <table>
             <thead>
               <tr>
-                <th>Product Name</th>
-                <th>Product Number</th>
-                <th>Payment</th>
+                <th>Employee ID</th>
+                <th>Emloyee Name</th>
                 <th>Status</th>
                 <th></th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td>Foldable Mini Drone</td>
+                <td>Sailesh</td>
                 <td>85631</td>
-                <td>Due</td>
-                <td class="warning">Pending</td>
+                <td>Present</td>
+                <!-- <td class="warning">Pending</td> -->
                 <td class="primary">Details</td>
               </tr>
               <tr>
-                <td>Foldable Mini Drone</td>
+                <td>Lava</td>
                 <td>85631</td>
-                <td>Due</td>
-                <td class="warning">Pending</td>
+                <td>Absent</td>
+                <!-- <td class="warning">Pending</td> -->
                 <td class="primary">Details</td>
               </tr>
               <tr>
-                <td>Foldable Mini Drone</td>
+                <td>Rahul</td>
                 <td>85631</td>
-                <td>Due</td>
-                <td class="warning">Pending</td>
+                <td>Absent</td>
+                <!-- <td class="warning">Pending</td> -->
                 <td class="primary">Details</td>
               </tr>
               <tr>
-                <td>Foldable Mini Drone</td>
+                <td>Rohit</td>
                 <td>85631</td>
-                <td>Due</td>
-                <td class="warning">Pending</td>
+                <td>Present</td>
+                <!-- <td class="warning">Pending</td> -->
                 <td class="primary">Details</td>
               </tr>
               <tr>
-                <td>Foldable Mini Drone</td>
+                <td>Yuva</td>
                 <td>85631</td>
-                <td>Due</td>
-                <td class="warning">Pending</td>
+                <td>Absent</td>
+                <!-- <td class="warning">Pending</td> -->
                 <td class="primary">Details</td>
               </tr>
             </tbody>
@@ -212,7 +211,7 @@
         </div>
         <!-- END OF TOP -->
         <div class="recent-updates">
-          <h2>Recent Updates</h2>
+          <h2>Monthly consolidate</h2>
           <div class="updates">
             <div class="update">
               <div class="profile-photo">
@@ -246,6 +245,7 @@
             </div>
           </div>
         </div>
+        
         <!-- =============END OF RECENT UPDATES======== -->
         <div class="sales-analytics">
           <h2>Sales Analytics</h2>
@@ -297,44 +297,6 @@
         </div>
       </div>
     </div>
-    <script type="text/javascript">
-      $(document).ready(function($)
-      {
-        var page_url = '<?php echo $app_url?>/';
-    
-        $(document).on('click', '.btn_load_home', function(event)
-        {
-          event.preventDefault();
-    
-          $(document).attr("title", 'Home');
-          $(document).find('meta[name=description]').attr('content', data.description);
-    
-          window.history.pushState("", "", page_url);
-          $(document).find('.post_msg').html(" ");
-        });
-    
-        $(document).on('click', '.btn_load_screen', function(event)
-        {
-          event.preventDefault();
-    
-          var call_type = $(this).attr('call_type');
-    
-          $.getJSON(page_url+'ajax.php', {call_type: call_type}, function(data, textStatus, xhr)
-          {
-            console.log(data);
-    
-            $(document).attr("title", data.title);
-            $(document).find('meta[name=description]').attr('content', data.description);
-    
-            $(document).find('.post_msg').html(data.data);
-    
-            window.history.pushState("", "", page_url+data.url);
-          });
-        });
-    
-    
-      });
-      </script>
     <script src="orders.js"></script>
     <script src="index.js"></script>    
   </body>
