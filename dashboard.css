@@ -164,7 +164,6 @@ aside .close{
 
 /* --------SIDEBAR---------- */
 aside .sidebar{
-  background: red;
   display: flex;
   flex-direction: column;
   height: 86vh;
@@ -589,7 +588,7 @@ main .recent-orders a{
 }
 
   /* ==========MEDIA QUERIES============= */
-  @media screen and (max-width: 768px){
+  /* @media screen and (max-width: 768px){
     .container{
       width: 100%;
       grid-template-columns: 1fr;
@@ -698,4 +697,4 @@ main .recent-orders a{
     .right .top button span{
       font-size: 2rem;
     }
-  }
+  } */
