@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
 
 :root {
   --color-primary:#7380ec;
@@ -39,6 +39,7 @@
 
 *{
   /* background-color:var(--color-background); */
+  font-family: 'Poppins', sans-serif;
   margin: 0;
   padding: 0;
   outline: 0;
@@ -64,6 +65,7 @@ body{
   overflow-x: hidden;
   color: var(--color-dark);
 }
+
 
 .container{
   display: grid;
@@ -112,6 +114,7 @@ small{
   height: 2.8rem;
   border-radius: 50%;
   overflow:hidden;
+  
 }
 
 .text-muted{
@@ -167,7 +170,6 @@ aside .close{
 
 /* --------SIDEBAR---------- */
 aside .sidebar{
-  color:red;
   display: flex;
   flex-direction: column;
   height: 86vh;
@@ -592,7 +594,7 @@ main .recent-orders a{
 }
 
   /* ==========MEDIA QUERIES============= */
-  /* @media screen and (max-width: 768px){
+  @media screen and (max-width: 768px){
     .container{
       width: 100%;
       grid-template-columns: 1fr;
@@ -701,4 +703,5 @@ main .recent-orders a{
     .right .top button span{
       font-size: 2rem;
     }
-  } */
+  }
+  

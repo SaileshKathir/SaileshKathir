@@ -32,18 +32,10 @@
               <span class="material-icons-sharp">engineering</span>
               <h3>EMPLOYEE</h3>
             </a>
-            <a href="#">
+            <a href="machines.html">
               <span class="material-icons-sharp">mark_as_unread</span>                
-              <h3>MESSAGES</h3>
-              <span class="message-count">25</span>
-            </a>
-            <a href="#">
-              <span class="material-icons-sharp">perm_contact_calendar</span>
-              <h3>CUSTOMERS</h3>
-            </a>
-            <a href="#">
-              <span class="material-icons-sharp">local_shipping</span>                
-              <h3>DELIVERY</h3>
+              <h3>Machines</h3>
+              <!-- <span class="message-count">25</span> -->
             </a>
             <a href="#">
               <span class="material-icons-sharp">logout</span>                
@@ -297,44 +289,7 @@
         </div>
       </div>
     </div>
-    <script type="text/javascript">
-      $(document).ready(function($)
-      {
-        var page_url = '<?php echo $app_url?>/';
-    
-        $(document).on('click', '.btn_load_home', function(event)
-        {
-          event.preventDefault();
-    
-          $(document).attr("title", 'Home');
-          $(document).find('meta[name=description]').attr('content', data.description);
-    
-          window.history.pushState("", "", page_url);
-          $(document).find('.post_msg').html(" ");
-        });
-    
-        $(document).on('click', '.btn_load_screen', function(event)
-        {
-          event.preventDefault();
-    
-          var call_type = $(this).attr('call_type');
-    
-          $.getJSON(page_url+'ajax.php', {call_type: call_type}, function(data, textStatus, xhr)
-          {
-            console.log(data);
-    
-            $(document).attr("title", data.title);
-            $(document).find('meta[name=description]').attr('content', data.description);
-    
-            $(document).find('.post_msg').html(data.data);
-    
-            window.history.pushState("", "", page_url+data.url);
-          });
-        });
-    
-    
-      });
-      </script>
+    <script type="text/javascript"></script>
     <script src="orders.js"></script>
     <script src="index.js"></script>    
   </body>

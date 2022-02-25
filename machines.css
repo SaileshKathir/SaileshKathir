@@ -1,0 +1,18 @@
+
+.right 
+{
+margin-top: -25.6rem !important;
+flex-direction: column !important;
+height: 11vh !important;
+top: -27rem !important;
+display: flex !important;
+color: var(--color-info-dark) !important;
+margin-left: 2rem !important;
+gap: 1rem !important;
+align-items: center !important;
+position: relative !important;
+left: 43rem !important;
+}
+
+
+  
