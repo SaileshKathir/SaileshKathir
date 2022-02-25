@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp"
       rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
     <link href="dashboard.css" rel="stylesheet">
   </head>
   <body >
@@ -24,18 +25,18 @@
         </div>
 
           <div class="sidebar">
-            <a href="index.html" >
+            <a href="index.html">
               <span class="material-icons-sharp">grid_view</span>
               <h3>DASHBOARD</h3>
             </a>
-            <a href="attendance.html" class="active">
+            <a href="attendance.html">
               <span class="material-icons-sharp">engineering</span>
               <h3>EMPLOYEE</h3>
             </a>
-            <a href="machines.html">
+            <a href="machines.html" class="active">
               <span class="material-icons-sharp">mark_as_unread</span>                
-              <h3>MACHINES</h3>
-              
+              <h3>Machines</h3>
+              <!-- <span class="message-count">25</span> -->
             </a>
             <a href="#">
               <span class="material-icons-sharp">perm_contact_calendar</span>
@@ -69,128 +70,42 @@
 
 
       <main>
-        <h1>Monitoring</h1>
+        <h1>Machines</h1>
 
         <div class="date">
           <input type="date">
         </div>
 
         <div class="insights">
-          <div class="sales">
-            <span class="material-icons-sharp">person</span>
-            <div class="middle">
-              <div class="left">
-                <h3>Total present</h3>
-                <h1>100</h1>
-              </div>
-              <div class="progress">
-                <svg>
-                  <circle cx="38" cy="38" r="36"></circle>
-                </svg>
-                <div class="number">
-                  <p>90%</p>
-                </div>
-              </div>
-            </div>
-            <small class="text-muted">Last 24 Hours</small>
-          </div>
-            <!-----END OF SALES ---->
-          <div class="expenses">
-            <span class="material-icons-sharp">
-              sick
-              </span>
-            <div class="middle">
-              <div class="left">
-                <h3>Total Absent</h3>
-                <h1>10</h1>
-              </div>
-              <div class="progress">
-                <svg>
-                  <circle cx="38" cy="38" r="36"></circle>
-                </svg>
-                <div class="number">
-                  <p>10%</p>
-                </div>
-              </div>
-            </div>
-            <small class="text-muted">Last 24 Hours</small>
-          </div>
-            <!-----END OF EXPENSES ---->
-          <!-- <div class="income">
-              <span class="material-icons-sharp">stacked_line_chart</span>
-              <div class="middle">
-                <div class="left">
-                  <h3>Total Income</h3>
-                  <h1>$10,854</h1>
-                </div>
-                <div class="progress">
-                  <svg>
-                    <circle cx="38" cy="38" r="36"></circle>
-                  </svg>
-                  <div class="number">
-                    <p>44%</p>
+          <!-- <div class="sales"> -->
+            <!-- <span class="material-icons-sharp">analytics</span> -->
+            <!-- <div class="middle"> -->
+              <!-- <div class="left"> -->
+                  <div class="Product_card">
+                      <div class="logo-cart">
+                          <img src="assets/img/developer.png" alt="image">
+                          <i class="material-icons-sharp">
+                            settings
+                          </i>
+
+
+                      </div>
                   </div>
-                </div>
+                
               </div>
-              <small class="text-muted">Last 24 Hours</small>
-          </div> -->
-              <!-----END OF INCOME ---->
+              <!-- <div class="progress">
+                <svg>
+                  <circle cx="38" cy="38" r="36"></circle>
+                </svg>
+                <div class="number">
+                  <p>81%</p>
+                </div> -->
+              
+          
         </div>
               <!-----END OF INSIGHTS ---->
 
-        <div class="recent-orders">
-          <h2>Attendance</h2>
-          <table>
-            <thead>
-              <tr>
-                <th>Employee ID</th>
-                <th>Emloyee Name</th>
-                <th>Status</th>
-                <th></th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Sailesh</td>
-                <td>85631</td>
-                <td>Present</td>
-                <!-- <td class="warning">Pending</td> -->
-                <td class="primary">Details</td>
-              </tr>
-              <tr>
-                <td>Lava</td>
-                <td>85631</td>
-                <td>Absent</td>
-                <!-- <td class="warning">Pending</td> -->
-                <td class="primary">Details</td>
-              </tr>
-              <tr>
-                <td>Rahul</td>
-                <td>85631</td>
-                <td>Absent</td>
-                <!-- <td class="warning">Pending</td> -->
-                <td class="primary">Details</td>
-              </tr>
-              <tr>
-                <td>Rohit</td>
-                <td>85631</td>
-                <td>Present</td>
-                <!-- <td class="warning">Pending</td> -->
-                <td class="primary">Details</td>
-              </tr>
-              <tr>
-                <td>Yuva</td>
-                <td>85631</td>
-                <td>Absent</td>
-                <!-- <td class="warning">Pending</td> -->
-                <td class="primary">Details</td>
-              </tr>
-            </tbody>
-          </table>
-          <a href="#">Show All</a>
-        </div>
-      </main>  
-      <!-- =========END OF MAIN============= -->
+        
 
       <div class="right">
         <div class="top">
@@ -213,7 +128,7 @@
         </div>
         <!-- END OF TOP -->
         <div class="recent-updates">
-          <h2>Monthly consolidate</h2>
+          <h2>Recent Updates</h2>
           <div class="updates">
             <div class="update">
               <div class="profile-photo">
@@ -247,7 +162,6 @@
             </div>
           </div>
         </div>
-        
         <!-- =============END OF RECENT UPDATES======== -->
         <div class="sales-analytics">
           <h2>Sales Analytics</h2>
@@ -299,6 +213,44 @@
         </div>
       </div>
     </div>
+    <script type="text/javascript">
+      $(document).ready(function($)
+      {
+        var page_url = '<?php echo $app_url?>/';
+    
+        $(document).on('click', '.btn_load_home', function(event)
+        {
+          event.preventDefault();
+    
+          $(document).attr("title", 'Home');
+          $(document).find('meta[name=description]').attr('content', data.description);
+    
+          window.history.pushState("", "", page_url);
+          $(document).find('.post_msg').html(" ");
+        });
+    
+        $(document).on('click', '.btn_load_screen', function(event)
+        {
+          event.preventDefault();
+    
+          var call_type = $(this).attr('call_type');
+    
+          $.getJSON(page_url+'ajax.php', {call_type: call_type}, function(data, textStatus, xhr)
+          {
+            console.log(data);
+    
+            $(document).attr("title", data.title);
+            $(document).find('meta[name=description]').attr('content', data.description);
+    
+            $(document).find('.post_msg').html(data.data);
+    
+            window.history.pushState("", "", page_url+data.url);
+          });
+        });
+    
+    
+      });
+      </script>
     <script src="orders.js"></script>
     <script src="index.js"></script>    
   </body>

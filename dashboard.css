@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
 
 :root {
   --color-primary:#7380ec;
@@ -39,6 +39,7 @@
 
 *{
   /* background-color:var(--color-background); */
+  font-family: 'Poppins', sans-serif;
   margin: 0;
   padding: 0;
   outline: 0;
@@ -64,6 +65,7 @@ body{
   overflow-x: hidden;
   color: var(--color-dark);
 }
+
 
 .container{
   display: grid;
@@ -112,6 +114,7 @@ small{
   height: 2.8rem;
   border-radius: 50%;
   overflow:hidden;
+  
 }
 
 .text-muted{
@@ -701,3 +704,31 @@ main .recent-orders a{
       font-size: 2rem;
     }
   } */
+  .Product_card{
+    max-width: 300px;
+    width: 100%;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    padding: 20px 30px 30px 30px;
+    border-radius: 25px;
+
+
+  
+  }
+
+
+  .Product_card .logo-cart{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .Product_card .logo-cart img{
+    height: 60px;
+    width : 60px;
+    object-fit: cover;
+
+  }
+  .Product_card .logo-cart .i{
+    f
+  }
+}
