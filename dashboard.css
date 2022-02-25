@@ -6,7 +6,7 @@
   --color-danger:#ff7782;
   --color-success:#41f1b6;
   --color-warning:#ffbb55;
-  --color-white:#fff;
+  --color-white:#f6f6f9;
   --color-info-dark:#7d8da1;
   --color-info-light:#dce1eb;
   --color-dark:#363949;
@@ -153,6 +153,7 @@ aside .top{
 aside .logo{
   display: flex;
   gap: 0.8rem;
+  margin-left:50;
 }
 
 aside .logo img{
@@ -166,7 +167,7 @@ aside .close{
 
 /* --------SIDEBAR---------- */
 aside .sidebar{
-  /* background: red; */
+  color:red;
   display: flex;
   flex-direction: column;
   height: 86vh;
