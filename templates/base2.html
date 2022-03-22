@@ -9,6 +9,8 @@
     <link href="static/css/dashboard.css" rel="stylesheet">
     <link rel="stylesheet" href="static/css/chat.css">
     <link rel="stylesheet" href="static/css/home.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   </head>
   <body >
     <div class="container">
@@ -16,7 +18,7 @@
         <div  class="top">
 
           <div class="logo">
-            <img src="333514-P9VYMX-448-removebg-preview.png">
+            <img src="/static/images/333514-P9VYMX-448-removebg-preview.png">
             <h2><span class="primary">SI</span><span class="danger">VAC</span></h2>
           </div>
 
@@ -26,18 +28,18 @@
         </div>
 
           <div class="sidebar">
-            <a href="index.html" >
+            <a href="#" class="active">
               <span class="material-icons-sharp">grid_view</span>
               <h3>DASHBOARD</h3>
             </a>
-            <a href="attendance.html" class="active">
+            <a href="{{url_for('attendance')}}">
               <span class="material-icons-sharp">engineering</span>
               <h3>EMPLOYEE</h3>
             </a>
-            <a href="machines.html">
+            <a href="{{url_for('machines')}}">
               <span class="material-icons-sharp">mark_as_unread</span>                
-              <h3>MACHINES</h3>              
-            </a>
+              <h3>Machines</h3>
+              <!-- <span class="message-count">25</span> -->
             </a>
             <a href="#">
               <span class="material-icons-sharp">logout</span>                
@@ -63,7 +65,7 @@
 
 
       <main>
-        <h1>Monitoring</h1>
+        <h1>DASHBOARD</h1>
 
         <div class="date">
           <input type="date">
@@ -71,18 +73,18 @@
 
         <div class="insights">
           <div class="sales">
-            <span class="material-icons-sharp">person</span>
+            <span class="material-icons-sharp">analytics</span>
             <div class="middle">
               <div class="left">
-                <h3>Total present</h3>
-                <h1>100</h1>
+                <h3>Total Sales</h3>
+                <h1>$25,024</h1>
               </div>
               <div class="progress">
                 <svg>
                   <circle cx="38" cy="38" r="36"></circle>
                 </svg>
                 <div class="number">
-                  <p>90%</p>
+                  <p>81%</p>
                 </div>
               </div>
             </div>
@@ -90,27 +92,25 @@
           </div>
             <!-----END OF SALES ---->
           <div class="expenses">
-            <span class="material-icons-sharp">
-              sick
-              </span>
+            <span class="material-icons-sharp">bar_chart</span>
             <div class="middle">
               <div class="left">
-                <h3>Total Absent</h3>
-                <h1>10</h1>
+                <h3>Total Expenses</h3>
+                <h1>$14,160</h1>
               </div>
               <div class="progress">
                 <svg>
                   <circle cx="38" cy="38" r="36"></circle>
                 </svg>
                 <div class="number">
-                  <p>10%</p>
+                  <p>62%</p>
                 </div>
               </div>
             </div>
             <small class="text-muted">Last 24 Hours</small>
           </div>
             <!-----END OF EXPENSES ---->
-          <!-- <div class="income">
+          <div class="income">
               <span class="material-icons-sharp">stacked_line_chart</span>
               <div class="middle">
                 <div class="left">
@@ -127,56 +127,57 @@
                 </div>
               </div>
               <small class="text-muted">Last 24 Hours</small>
-          </div> -->
+          </div>
               <!-----END OF INCOME ---->
         </div>
               <!-----END OF INSIGHTS ---->
 
         <div class="recent-orders">
-          <h2>Attendance</h2>
+          <h2>RECENT ORDERS</h2>
           <table>
             <thead>
               <tr>
-                <th>Employee ID</th>
-                <th>Emloyee Name</th>
+                <th>Product Name</th>
+                <th>Product Number</th>
+                <th>Payment</th>
                 <th>Status</th>
                 <th></th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td>Sailesh</td>
+                <td>Foldable Mini Drone</td>
                 <td>85631</td>
-                <td>Present</td>
-                <!-- <td class="warning">Pending</td> -->
+                <td>Due</td>
+                <td class="warning">Pending</td>
                 <td class="primary">Details</td>
               </tr>
               <tr>
-                <td>Lava</td>
+                <td>Foldable Mini Drone</td>
                 <td>85631</td>
-                <td>Absent</td>
-                <!-- <td class="warning">Pending</td> -->
+                <td>Due</td>
+                <td class="warning">Pending</td>
                 <td class="primary">Details</td>
               </tr>
               <tr>
-                <td>Rahul</td>
+                <td>Foldable Mini Drone</td>
                 <td>85631</td>
-                <td>Absent</td>
-                <!-- <td class="warning">Pending</td> -->
+                <td>Due</td>
+                <td class="warning">Pending</td>
                 <td class="primary">Details</td>
               </tr>
               <tr>
-                <td>Rohit</td>
+                <td>Foldable Mini Drone</td>
                 <td>85631</td>
-                <td>Present</td>
-                <!-- <td class="warning">Pending</td> -->
+                <td>Due</td>
+                <td class="warning">Pending</td>
                 <td class="primary">Details</td>
               </tr>
               <tr>
-                <td>Yuva</td>
+                <td>Foldable Mini Drone</td>
                 <td>85631</td>
-                <td>Absent</td>
-                <!-- <td class="warning">Pending</td> -->
+                <td>Due</td>
+                <td class="warning">Pending</td>
                 <td class="primary">Details</td>
               </tr>
             </tbody>
@@ -201,13 +202,13 @@
               <small class="text-muted">Admin</small>
             </div>
             <div class="profile-photo">
-              <img src="profile-picture.png">
+              <img src="/static/images/profile-picture.png">
             </div>
           </div>
         </div>
         <!-- END OF TOP -->
         <div class="recent-updates">
-          <h2>Monthly consolidate</h2>
+          <h2>Recent Updates</h2>
           <div class="updates">
             <div class="update">
               <div class="profile-photo">
@@ -231,7 +232,7 @@
             </div>
             <div class="update">
               <div class="profile-photo">
-                <img src="profile-picture.png">
+                <img src="/static/images/profile-picture.png">
               </div>
               <div class="message">
                 <p><b>Peter</b> received this order
@@ -241,7 +242,6 @@
             </div>
           </div>
         </div>
-        
         <!-- =============END OF RECENT UPDATES======== -->
         <div class="sales-analytics">
           <h2>Sales Analytics</h2>
@@ -293,55 +293,51 @@
         </div>
       </div>
     </div>
-    <div>
-      <!-- CHAT BAR BLOCK -->
-    <div class="chat-bar-collapsible">
-      <button id="chat-button" type="button" class="collapsible">Chat with us!
-          <i id="chat-icon" style="color: #fff;" class="fa fa-fw fa-comments-o"></i>
-      </button>
-
-      <div class="content">
-          <div class="full-chat-block">
-              <!-- Message Container -->
-              <div class="outer-container">
-                  <div class="chat-container">
-                      <!-- Messages -->
-                      <div id="chatbox">
-                          <h5 id="chat-timestamp"></h5>
-                          <p id="botStarterMessage" class="botText"><span>Loading...</span></p>
-                      </div>
-
-                      <!-- User input box -->
-                      <div class="chat-bar-input-block">
-                          <div id="userInput">
-                              <input id="textInput" class="input-box" type="text" name="msg"
-                                  placeholder="Tap 'Enter' to send a message">
-                              <p></p>
-                          </div>
-
-                          <div class="chat-bar-icons">
-                              <i id="chat-icon" style="color: crimson;" class="fa fa-fw fa-heart"
-                                  onclick="heartButton()"></i>
-                              <i id="chat-icon" style="color: #333;" class="fa fa-fw fa-send"
-                                  onclick="sendButton()"></i>
-                          </div>
-                      </div>
-
-                      <div id="chat-bar-bottom">
-                          <p></p>
-                      </div>
-
-                  </div>
-              </div>
-
-          </div>
-      </div>
 
   </div>
     </div>
-    <script src="static/scripts/responses.js"></script>
-    <script src="static/scripts/chat.js"></script>
-    <script src="orders.js"></script>
-    <script src="index.js"></script>    
+    <!-- Chat box -->
+    <div class="container">
+      <div class="chatbox">
+          <div class="chatbox__support">
+              <div class="chatbox__header">
+                  <div class="chatbox__image--header">
+                      <img src="https://img.icons8.com/color/48/000000/circled-user-female-skin-type-5--v1.png" alt="image">
+                  </div>
+                  <div class="chatbox__content--header">
+                      <h4 class="chatbox__heading--header">Chat support</h4>
+                      <p class="chatbox__description--header">Hi. My name is Sam. How can I help you?</p>
+                  </div>
+              </div>
+              <div class="chatbox__messages">
+                  <div></div>
+              </div>
+              <div class="chatbox__footer">
+                  <input type="text" placeholder="Write a message...">
+                  <button class="chatbox__send--footer send__button">Send</button>
+              </div>
+          </div>
+          <div class="chatbox__button">
+              <button><img src="{{ url_for('static', filename='images/chatbox-icon.svg') }}" /></button>
+          </div>
+      </div>
+  </div>
+    <!-- <script src="static/scripts/responses.js"></script> -->
+    <!-- <script src="static/scripts/chat.js"></script> -->
+    
+    <!-- <script src="orders.js"></script>
+    <script src="index.js"></script> -->
+    <script type="text/javascript"></script>
+    <script type="text/javascript">
+      var $SCRIPT_ROOT = '{{ request.script_root|tojson|safe }}';
+    </script>
+    <script type="text/javascript" 
+    src="{{ url_for('static', filename='app.js') }}"
+    src="{{ url_for('static',filename='responses.js') }}"
+    src="{{ url_for('static',filename='orders.js') }}"
+    src="{{ url_for('static',filename='index.js') }}">
+  </script> 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
   </body>
 </html>

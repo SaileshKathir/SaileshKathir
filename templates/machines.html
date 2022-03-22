@@ -6,10 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp"
       rel="stylesheet">
+    <link href="static/css/dashboard.css" rel="stylesheet">
     <link rel="stylesheet" href="static/css/chat.css">
     <link rel="stylesheet" href="static/css/home.css">
-    <link href="static/css/machines.css" rel="stylesheet">
-    <link href="static/css/dashboard.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link href="/static/css/machines.css" rel="stylesheet">
+    <link href="/static/css/dashboard.css" rel="stylesheet">
   </head>
   <body >
     <div class="container">
@@ -17,7 +19,7 @@
         <div  class="top">
 
           <div class="logo">
-            <img src="333514-P9VYMX-448-removebg-preview.png">
+            <img src="/static/images/333514-P9VYMX-448-removebg-preview.png">
             <h2><span class="primary">SI</span><span class="danger">VAC</span></h2>
           </div>
 
@@ -27,15 +29,15 @@
         </div>
 
           <div class="sidebar">
-            <a href="index.html">
+            <a href="{{url_for('index')}}">
               <span class="material-icons-sharp">grid_view</span>
               <h3>DASHBOARD</h3>
             </a>
-            <a href="attendance.html">
+            <a href="{{url_for('attendance')}}">
               <span class="material-icons-sharp">engineering</span>
               <h3>EMPLOYEE</h3>
             </a>
-            <a href="machines.html"  class="active">
+            <a href="{{url_for('machines')}}"  class="active">
               <span class="material-icons-sharp">mark_as_unread</span>                
               <h3>Machines</h3>
               <!-- <span class="message-count">25</span> -->
@@ -78,7 +80,7 @@
                 <h1>WEAVING</h1>
               </div>
                 <div class="numberS">
-                  <input type="image" src="assets/img/weaving image.jpg" name="submit" width="100" height="48" alt="submit">  
+                  <input type="image" src="/static/images/weaving image.jpg" name="submit" width="100" height="48" alt="submit">  
                 </div>
               </div>
               <button id="myBtn">CLICK HERE</button>
@@ -128,7 +130,7 @@
               <small class="text-muted">Admin</small>
             </div>
             <div class="profile-photo">
-              <img src="profile-picture.png">
+              <img src="/static/images/profile-picture.png">
             </div>
           </div>
         </div>
@@ -160,7 +162,7 @@
           <div class="updates">
             <div class="update">
               <div class="profile-photo">
-                <img src="profile-picture.png">
+                <img src="/static/images/profile-picture.png">
               </div>
               <div class="message">
                 <p><b>Mike Tyson</b> received this order
@@ -170,7 +172,7 @@
             </div>
             <div class="update">
               <div class="profile-photo">
-                <img src="profile-picture.png">
+                <img src="/static/images/profile-picture.png">
               </div>
               <div class="message">
                 <p><b>Bean</b> received this order
@@ -180,7 +182,7 @@
             </div>
             <div class="update">
               <div class="profile-photo">
-                <img src="profile-picture.png">
+                <img src="/static/images/profile-picture.png">
               </div>
               <div class="message">
                 <p><b>Peter</b> received this order
@@ -195,57 +197,44 @@
       </div>
     </div>
       <div>
-        <!-- CHAT BAR BLOCK -->
-      <div class="chat-bar-collapsible">
-        <button id="chat-button" type="button" class="collapsible">Chat with us!
-            <i id="chat-icon" style="color: #fff;" class="fa fa-fw fa-comments-o"></i>
-        </button>
-  
-        <div class="content">
-            <div class="full-chat-block">
-                <!-- Message Container -->
-                <div class="outer-container">
-                    <div class="chat-container">
-                        <!-- Messages -->
-                        <div id="chatbox">
-                            <h5 id="chat-timestamp"></h5>
-                            <p id="botStarterMessage" class="botText"><span>Loading...</span></p>
-                        </div>
-  
-                        <!-- User input box -->
-                        <div class="chat-bar-input-block">
-                            <div id="userInput">
-                                <input id="textInput" class="input-box" type="text" name="msg"
-                                    placeholder="Tap 'Enter' to send a message">
-                                <p></p>
-                            </div>
-  
-                            <div class="chat-bar-icons">
-                                <i id="chat-icon" style="color: crimson;" class="fa fa-fw fa-heart"
-                                    onclick="heartButton()"></i>
-                                <i id="chat-icon" style="color: #333;" class="fa fa-fw fa-send"
-                                    onclick="sendButton()"></i>
-                            </div>
-                        </div>
-  
-                        <div id="chat-bar-bottom">
-                            <p></p>
-                        </div>
-  
-                    </div>
-                </div>
-  
-            </div>
-        </div>
+        <!-- Chat box -->
+    <div class="container">
+      <div class="chatbox">
+          <div class="chatbox__support">
+              <div class="chatbox__header">
+                  <div class="chatbox__image--header">
+                      <img src="https://img.icons8.com/color/48/000000/circled-user-female-skin-type-5--v1.png" alt="image">
+                  </div>
+                  <div class="chatbox__content--header">
+                      <h4 class="chatbox__heading--header">Chat support</h4>
+                      <p class="chatbox__description--header">Hi. My name is Sam. How can I help you?</p>
+                  </div>
+              </div>
+              <div class="chatbox__messages">
+                  <div></div>
+              </div>
+              <div class="chatbox__footer">
+                  <input type="text" placeholder="Write a message...">
+                  <button class="chatbox__send--footer send__button">Send</button>
+              </div>
+          </div>
+          <div class="chatbox__button">
+              <button><img src="{{ url_for('static', filename='images/chatbox-icon.svg') }}" /></button>
+          </div>
+      </div>
+  </div>
   
     </div>
       </div>
-      <script src="static/scripts/responses.js"></script>
-      <script src="static/scripts/chat.js"></script>
-    
-    <script src="machines.js"></script>
-    <script type="text/javascript"></script>
-    <script src="orders.js"></script>
-    <script src="index.js"></script>    
+      <script type="text/javascript"></script>
+    <script type="text/javascript">
+      var $SCRIPT_ROOT = '{{ request.script_root|tojson|safe }}';
+    </script>
+    <script type="text/javascript" 
+    src="{{ url_for('static', filename='app.js') }}"
+    src="{{ url_for('static',filename='responses.js') }}"
+    src="{{ url_for('static',filename='orders.js') }}"
+    src="{{ url_for('static',filename='index.js') }}">
+  </script>     
   </body>
 </html>
