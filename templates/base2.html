@@ -11,6 +11,8 @@
     <link rel="stylesheet" href="static/css/home.css">
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script>responsiveVoice.speak('Hello', 'Turkish Male')</script>
+
   </head>
   <body >
     <div class="container">
@@ -337,7 +339,10 @@
     src="{{ url_for('static',filename='orders.js') }}"
     src="{{ url_for('static',filename='index.js') }}">
   </script> 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
+ 
+  <script src="https://code.responsivevoice.org/responsivevoice.js?key=aIhCnnak"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    
   </body>
 </html>
