@@ -310,8 +310,8 @@
                   <div></div>
               </div>
               <div class="chatbox__footer">
-                  <input type="text" placeholder="Write a message...">
-                  <button class="chatbox__send--footer send__button">Send</button>
+                  <input type="text"  placeholder="Write a message...">
+                  <button class="chatbox__send--footer send__button" id="text-to-send">Send</button>
               </div>
           </div>
           <div class="chatbox__button">
@@ -324,18 +324,14 @@
     
     <!-- <script src="orders.js"></script>
     <script src="index.js"></script> -->
-    <script type="text/javascript"></script>
+    
     <script type="text/javascript">
       var $SCRIPT_ROOT = '{{ request.script_root|tojson|safe }}';
     </script>
-    <script type="text/javascript" 
-    src="{{ url_for('static', filename='app.js') }}"
-    src="{{ url_for('static',filename='responses.js') }}"
-    src="{{ url_for('static',filename='orders.js') }}"
-    src="{{ url_for('static',filename='index.js') }}">
-  </script> 
-
- 
+    <script type="text/javascript" src="{{ url_for('static', filename='app.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static',filename='orders.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static',filename='index.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='voice.js') }}"></script>
   <script src="https://code.responsivevoice.org/responsivevoice.js?key=aIhCnnak"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     
