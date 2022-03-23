@@ -69,7 +69,7 @@ body{
 
 .container{
   display: grid;
-  width: 96%;
+  width: 100%;
   margin: 0 auto;
   background:var(--color-white);
   gap: 1.8rem;
@@ -149,7 +149,7 @@ aside{
 aside .top{
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   margin-top: 1.4rem;
 }
 
@@ -165,7 +165,7 @@ aside .logo img{
 }
 
 aside .close{
-  display: block;
+  display: none;
 }
 
 /* --------SIDEBAR---------- */
@@ -396,6 +396,7 @@ main .recent-orders a{
 
 /* ====RIGHT===== */
 .right{
+  margin-right: 20px;
   margin-top: 1.4rem;
 }
 
