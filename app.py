@@ -33,7 +33,10 @@ def index():
 
 @app.route("/attendance")
 def attendance():
-    return render_template("attendance.html")
+    cur = mysql.connection.cursor()
+    cur.execute("select * from Attendance") 
+    data = cur.fetchall() #data from database 
+    return render_template("attendance.html", value=data)
 
 @app.route("/machines/")
 def machines():

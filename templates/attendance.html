@@ -78,6 +78,7 @@
             <span class="material-icons-sharp">person</span>
             <div class="middle">
               <div class="left">
+               
                 <h3>Total present</h3>
                 <h1>100</h1>
               </div>
@@ -148,41 +149,15 @@
               </tr>
             </thead>
             <tbody>
-              <tr>
-                <td>Sailesh</td>
-                <td>85631</td>
-                <td>Present</td>
-                <!-- <td class="warning">Pending</td> -->
-                <td class="primary">Details</td>
-              </tr>
-              <tr>
-                <td>Lava</td>
-                <td>85631</td>
-                <td>Absent</td>
-                <!-- <td class="warning">Pending</td> -->
-                <td class="primary">Details</td>
-              </tr>
-              <tr>
-                <td>Rahul</td>
-                <td>85631</td>
-                <td>Absent</td>
-                <!-- <td class="warning">Pending</td> -->
-                <td class="primary">Details</td>
-              </tr>
-              <tr>
-                <td>Rohit</td>
-                <td>85631</td>
-                <td>Present</td>
-                <!-- <td class="warning">Pending</td> -->
-                <td class="primary">Details</td>
-              </tr>
-              <tr>
-                <td>Yuva</td>
-                <td>85631</td>
-                <td>Absent</td>
-                <!-- <td class="warning">Pending</td> -->
-                <td class="primary">Details</td>
-              </tr>
+              <tbody>
+                {% for row in value %} 
+                <tr>
+                  <td>{{row[0]}}</td>
+                  <td>{{row[1]}}</td>
+                  <td>{{row[2]}}</td>
+                  <td class="primary">Details</td>
+                </tr>
+                {% endfor %}
             </tbody>
           </table>
           <a href="#">Show All</a>
