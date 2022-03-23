@@ -34,13 +34,11 @@
     {
       "tag": "items",
       "patterns": [
-        "Which items do you have?",
-        "What kinds of items are there?",
-        "What do you sell?"
+        "What functionality does this website have"
+        
       ],
       "responses": [
-        "We sell coffee and tea",
-        "We have coffee and tea"
+        "We can supervise all the induatry machines remotely from anywhere."
       ]
     },
     {

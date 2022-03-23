@@ -1,3 +1,4 @@
+
 class Chatbox {
     constructor() {
         this.args = {
@@ -59,14 +60,11 @@ class Chatbox {
             this.messages.push(msg2);
             let speech = new SpeechSynthesisUtterance();
             speech.lang = "en-US";
-            
             speech.text = r.answer;
             speech.volume = 1;
             speech.rate = 1;
             speech.pitch = 1;
-            
             window.speechSynthesis.speak(speech);
-            
             this.updateChatText(chatbox)
             textField.value = ''
 
@@ -83,7 +81,6 @@ class Chatbox {
             if (item.name === "BOT")
             {
                 html += '<div class="messages__item messages__item--visitor">' + item.message + '</div>'
-                
             }   
             else
             {
@@ -94,6 +91,7 @@ class Chatbox {
         const chatmessage = chatbox.querySelector('.chatbox__messages');
         chatmessage.innerHTML = html;
     }
+    
 
 }
 

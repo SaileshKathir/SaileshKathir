@@ -1,0 +1,4 @@
+mysql_host : 'mysql.selfmade.ninja'
+mysql_user : 'supervising'
+mysql_password : 'lavan@123'
+mysql_db : 'supervising_stocks'
