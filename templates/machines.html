@@ -216,20 +216,20 @@
                   <div></div>
               </div>
               <div class="chatbox__footer">
-                  <label for="Speech Recognition"></label>
-                  <input type="text" placeholder="Write a message..." id="speechToText" onclick="record()">
-                  <script>
-                    function record() {
-                        var recognition = new webkitSpeechRecognition();
-                        recognition.lang = "en-GB";
-            
-                        recognition.onresult = function(event) {
-                            document.getElementById('speechToText').value = event.results[0][0].transcript;
-                        }
-                        recognition.start();
-            
-                    }
-                  </script>
+                <label for="Speech Recognition"></label>
+                <input type="text"  placeholder="Write a message..." id="speechToText" onclick="record()">
+                <script>
+                  function record() {
+                      var recognition = new webkitSpeechRecognition();
+                      recognition.lang = "en-GB";
+          
+                      recognition.onresult = function(event) {
+                          document.getElementById('speechToText').value = event.results[0][0].transcript;
+                      }
+                      recognition.start();
+          
+                  }
+              </script>
                   <button class="chatbox__send--footer send__button">Send</button>
               </div>
           </div>

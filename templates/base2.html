@@ -4,15 +4,13 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp"
       rel="stylesheet">
     <link href="static/css/dashboard.css" rel="stylesheet">
+    <link rel="stylesheet" href="static/css/chat.css">
     <link rel="stylesheet" href="static/css/home.css">
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script>responsiveVoice.speak('Hello', 'Turkish Male')</script>
 
   </head>
   <body >
@@ -311,12 +309,8 @@
                   <div></div>
               </div>
               <div class="chatbox__footer">
-<<<<<<< HEAD
-                  <input type="text"  placeholder="Write a message...">
-                  <button class="chatbox__send--footer send__button" id="text-to-send">Send</button>
-=======
                   <label for="Speech Recognition"></label>
-                  <input type="text" placeholder="Write a message..." id="speechToText" onclick="record()">
+                  <input type="text"  placeholder="Write a message..." id="speechToText" onclick="record()">
                   <script>
                     function record() {
                         var recognition = new webkitSpeechRecognition();
@@ -326,10 +320,10 @@
                             document.getElementById('speechToText').value = event.results[0][0].transcript;
                         }
                         recognition.start();
+            
                     }
-                  </script>
-                  <button class="chatbox__send--footer send__button">Send</button>
->>>>>>> a4ca59e2c9bc17b1a572dd33ee5e115d0d99d65c
+                </script>
+                  <button class="chatbox__send--footer send__button" id="text-to-send">Send</button>
               </div>
           </div>
           <div class="chatbox__button">
@@ -337,28 +331,14 @@
           </div>
       </div>
   </div>
-    <!-- <script src="static/scripts/responses.js"></script> -->
-    <!-- <script src="static/scripts/chat.js"></script> -->
-    
-    <!-- <script src="orders.js"></script>
-    <script src="index.js"></script> -->
     
     <script type="text/javascript">
       var $SCRIPT_ROOT = '{{ request.script_root|tojson|safe }}';
     </script>
     <script type="text/javascript" src="{{ url_for('static', filename='app.js') }}"></script>
-<<<<<<< HEAD
-    <script type="text/javascript" src="{{ url_for('static',filename='orders.js') }}"></script>
     <script type="text/javascript" src="{{ url_for('static',filename='index.js') }}"></script>
     <script type="text/javascript" src="{{ url_for('static', filename='voice.js') }}"></script>
-=======
-    <script type="text/javascript" src="{{ url_for('static',filename='responses.js') }}"></script>
-    <script type="text/javascript" src="{{ url_for('static',filename='orders.js') }}"></script>
-    <script type="text/javascript" src="{{ url_for('static',filename='index.js') }}"></script>
 
- 
->>>>>>> a4ca59e2c9bc17b1a572dd33ee5e115d0d99d65c
-  <script src="https://code.responsivevoice.org/responsivevoice.js?key=aIhCnnak"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     
   </body>
