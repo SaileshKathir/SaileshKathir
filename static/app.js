@@ -47,7 +47,7 @@ class Chatbox {
             window.location.pathname = ('/attendance');
             return;
         }
-        if (text1 === "machine") {
+        if (text1 === "machines") {
             window.location.pathname = ('/machines/');
             return;
         }

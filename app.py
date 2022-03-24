@@ -1,5 +1,4 @@
 # from asyncio.base_events import _ExceptionHandler
-import pymysql
 import yaml
 from email import message
 from urllib import response
@@ -39,14 +38,14 @@ def index():
         # content = {'Product_name': result['Product_name'], 'Product_number': result['Product_number'], 'Payment': result['Payment'] , 'Status': result['Status']}
         intents.append(dict(zip(row_headers,result)))
         # return render_template("base2.html", value=data)
-        def write_json(d,filename="/home/lavan.s/htdocs/SaileshKathir/intents.json"):
+        def write_json(d,filename="./intents.json"):
             with open (filename,"w") as f:
                 # cur = mysql.connection.cursor()
                 # cur.execute("select * from Recent_orders")
                 # data = cur.fetchall() #data from database 
                 json.dump(d,f,indent=4)
 
-        with open("/home/lavan.s/htdocs/SaileshKathir/intents.json") as json_file:
+        with open("./intents.json") as json_file:
             d=json.load(json_file)
             # cur = mysql.connection.cursor()
             # cur.execute("select * from Recent_orders")
@@ -68,13 +67,10 @@ def attendance():
     data = cur.fetchall() #data from database 
     return render_template("attendance.html", value=data,present=0,absent=0)
 
-@app.route("/regatt")
-def regatt():
-    return render_template("regatt.html")
 @app.route("/machines/")
 def machines():
     return render_template("machines.html")
-   
+
 
 @app.post("/predict")
 def predict():
