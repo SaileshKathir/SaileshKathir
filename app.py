@@ -9,7 +9,7 @@ from flask_mysqldb import MySQL
 import json
 app = Flask(__name__)
 # Database connect
-db = yaml.load(open('/home/lavan.s/htdocs/SaileshKathir/static/config.yaml'))
+db = yaml.load(open('./static/config.yaml'))
 app.config['MYSQL_HOST'] = db['mysql_host']
 app.config['MYSQL_USER'] = db['mysql_user']
 app.config['MYSQL_PASSWORD'] = db['mysql_password']
