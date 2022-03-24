@@ -38,11 +38,22 @@ class Chatbox {
     onSendButton(chatbox) {
         var textField = chatbox.querySelector('input');
         let text1 = textField.value
-        if (text1 === "") {
+        console.log(text1);
+        if (text1 === "dashboard") {
+            window.location.pathname = ('/');
+            return;
+        }
+        if (text1 === "employee") {
+            window.location.pathname = ('/attendance');
+            return;
+        }
+        if (text1 === "machine") {
+            window.location.pathname = ('/machines/');
             return;
         }
 
         let msg1 = { name: "User", message: text1 }
+        console.log(msg1)
         this.messages.push(msg1);
         
         fetch('http://127.0.0.1:5000/predict', {

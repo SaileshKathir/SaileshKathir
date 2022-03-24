@@ -34,7 +34,7 @@
               <span class="material-icons-sharp">grid_view</span>
               <h3>DASHBOARD</h3>
             </a>
-            <a href="{{url_for('attendance')}}" class="active">
+            <a  class="active">
               <span class="material-icons-sharp">engineering</span>
               <h3>EMPLOYEE</h3>
             </a>
@@ -78,9 +78,11 @@
             <span class="material-icons-sharp">person</span>
             <div class="middle">
               <div class="left">
-               
                 <h3>Total present</h3>
-                <h1>100</h1>
+                
+                
+                <h1>{% print(100) %}</h1>
+                   
               </div>
               <div class="progress">
                 <svg>
