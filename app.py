@@ -78,25 +78,9 @@ def attendance():
 #         self.firstName = firstName
 #         self.lastName = lastName
 #         self.email = email
-def regatt():
-    cur = mysql.connection.cursor()
-    eid = request.form['Empid']
-    ename = request.form['Employee_name']
-    Stat = request.form['Status']
-    # user = Person(newFirstName, newLastName, newEmail)
-    mySql_insert_query = """INSERT INTO Attendance (Employee_id, Employee_name, Status) 
-                                VALUES (%s, %s, %s) """
 
-    record = (eid,ename,Stat)
-    cur.execute(mySql_insert_query, record)
-    # cur.session.add(user)
-    cur.session.commit()
-    
-    return render_template("regatt.html")
 
-@app.route("/attenreg")
-def attenreg():
-    return render_template("regatt.html")
+
 @app.route("/machines/")
 def machines():
     return render_template("machines.html")
