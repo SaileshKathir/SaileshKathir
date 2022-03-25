@@ -52,7 +52,7 @@ class Chatbox {
             return;
         }
         if (text1 === "Thread Tension") {
-            this.messages.push("Its normal no maintanence required");
+            window.location.pathname = ('/machines/');
             let speech = new SpeechSynthesisUtterance();
             speech.lang = "en-US";
             speech.text = "Its normal no maintanence required";
