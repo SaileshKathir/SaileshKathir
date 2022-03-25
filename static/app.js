@@ -51,7 +51,7 @@ class Chatbox {
             window.location.pathname = ('/machines/');
             return;
         }
-        if (text1 === "Thread Tension") {
+        if (text1 === "Thread Tension" || text1 === "thread tension" || text1 === "Thread tension" || text1 === "thread Tension" ) {
             window.location.pathname = ('/machines/');
             let speech = new SpeechSynthesisUtterance();
             speech.lang = "en-US";
@@ -63,6 +63,12 @@ class Chatbox {
             this.updateChatText(chatbox)
             textField.value = ''
             
+            return;
+        }
+        if (text1 === "dark mode") {
+            document.body.classList.toggle('dark-theme-variables');
+            themeToggler.querySelector('span:nth-child(1)').classList.toggle('active');
+            themeToggler.querySelector('span:nth-child(2)').classList.toggle('active');
             return;
         }
        
