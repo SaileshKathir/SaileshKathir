@@ -67,6 +67,36 @@ def attendance():
     data = cur.fetchall() #data from database 
     return render_template("attendance.html", value=data,present=0,absent=0)
 
+@app.route("/regatt",methods =["POST"])
+# class Person(mysql):
+#     id = mysql.Column(mysql.Integer, primary_key=True)
+#     firstName = mysql.Column(db.String(120), unique=False)
+#     lastName = mysql.Column(db.String(120), unique=False)
+#     email = mysql.Column(db.String(220), unique=False)
+
+#     def __init__(self, firstName, lastName, email):
+#         self.firstName = firstName
+#         self.lastName = lastName
+#         self.email = email
+def regatt():
+    cur = mysql.connection.cursor()
+    eid = request.form['Empid']
+    ename = request.form['Employee_name']
+    Stat = request.form['Status']
+    # user = Person(newFirstName, newLastName, newEmail)
+    mySql_insert_query = """INSERT INTO Attendance (Employee_id, Employee_name, Status) 
+                                VALUES (%s, %s, %s) """
+
+    record = (eid,ename,Stat)
+    cur.execute(mySql_insert_query, record)
+    # cur.session.add(user)
+    cur.session.commit()
+    
+    return render_template("regatt.html")
+
+@app.route("/attenreg")
+def attenreg():
+    return render_template("regatt.html")
 @app.route("/machines/")
 def machines():
     return render_template("machines.html")

@@ -18,11 +18,25 @@
             ]
         },
         {
+            "tag": "Thread",
+            "patterns": [
+                "Thread tension",
+                "thread tension",
+                "Thread Tension",
+                "Thread",
+                "Goodbye"
+            ],
+            "responses": [
+                "Its normal no maintanence required"
+                
+            ]
+        },
+        {
             "tag": "goodbye",
             "patterns": [
                 "Bye",
-                "See you later",
-                "Goodbye"
+                "See you later"
+                
             ],
             "responses": [
                 "See you later, thanks for visiting",
@@ -221,6 +235,106 @@
             "patterns": "Hello",
             "responses": "hi"
         },
+        [
+            {
+                "Product_name": "Mini Drone",
+                "Product_number": 1009,
+                "Payment": "Paid",
+                "Status": "Pending"
+            }
+        ],
+        [
+            {
+                "Product_name": "Mini Drone",
+                "Product_number": 1009,
+                "Payment": "Paid",
+                "Status": "Pending"
+            },
+            {
+                "Product_name": "Drone",
+                "Product_number": 1010,
+                "Payment": "Paid",
+                "Status": "Due"
+            }
+        ],
+        [
+            {
+                "Product_name": "Mini Drone",
+                "Product_number": 1009,
+                "Payment": "Paid",
+                "Status": "Pending"
+            },
+            {
+                "Product_name": "Drone",
+                "Product_number": 1010,
+                "Payment": "Paid",
+                "Status": "Due"
+            },
+            {
+                "Product_name": "Car",
+                "Product_number": 1011,
+                "Payment": "Unpaid",
+                "Status": "Pending"
+            }
+        ],
+        [
+            {
+                "Product_name": "Mini Drone",
+                "Product_number": 1009,
+                "Payment": "Paid",
+                "Status": "Pending"
+            },
+            {
+                "Product_name": "Drone",
+                "Product_number": 1010,
+                "Payment": "Paid",
+                "Status": "Due"
+            },
+            {
+                "Product_name": "Car",
+                "Product_number": 1011,
+                "Payment": "Unpaid",
+                "Status": "Pending"
+            },
+            {
+                "Product_name": "Bike",
+                "Product_number": 1012,
+                "Payment": "Paid",
+                "Status": "Delivered"
+            }
+        ],
+        [
+            {
+                "Product_name": "Mini Drone",
+                "Product_number": 1009,
+                "Payment": "Paid",
+                "Status": "Pending"
+            },
+            {
+                "Product_name": "Drone",
+                "Product_number": 1010,
+                "Payment": "Paid",
+                "Status": "Due"
+            },
+            {
+                "Product_name": "Car",
+                "Product_number": 1011,
+                "Payment": "Unpaid",
+                "Status": "Pending"
+            },
+            {
+                "Product_name": "Bike",
+                "Product_number": 1012,
+                "Payment": "Paid",
+                "Status": "Delivered"
+            },
+            {
+                "Product_name": "Tempsensor",
+                "Product_number": 1012,
+                "Payment": "On Due",
+                "Status": "Delivered"
+            }
+        ],
         [
             {
                 "Product_name": "Mini Drone",

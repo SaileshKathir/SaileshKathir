@@ -51,6 +51,21 @@ class Chatbox {
             window.location.pathname = ('/machines/');
             return;
         }
+        if (text1 === "Thread Tension") {
+            this.messages.push("Its normal no maintanence required");
+            let speech = new SpeechSynthesisUtterance();
+            speech.lang = "en-US";
+            speech.text = "Its normal no maintanence required";
+            speech.volume = 1;
+            speech.rate = 1;
+            speech.pitch = 1;
+            window.speechSynthesis.speak(speech);
+            this.updateChatText(chatbox)
+            textField.value = ''
+            
+            return;
+        }
+       
 
         let msg1 = { name: "User", message: text1 }
         console.log(msg1)
